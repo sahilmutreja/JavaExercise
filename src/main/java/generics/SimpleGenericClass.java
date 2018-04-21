@@ -9,22 +9,28 @@ import java.util.ArrayList;
  */
 public class SimpleGenericClass{
     public static void main(String[] args) {
+        /*Example 1: Simple Generics Class with 2 parameters*/
         CustomHashMap<Integer,String> map = new CustomHashMap<>(1,"one");
         System.out.println("Map: " + map);
+
+        /*Example 2: Bounded Type Generics Class with 1 parameter*/
         BoundTypeExample<Integer> btInt = new BoundTypeExample<>(10);
         System.out.println("Value of BoundTypeExample<>(10): " + btInt.getId());
         BoundTypeExample<Double> btDouble = new BoundTypeExample<>(10.5);
         System.out.println("Value of BoundTypeExample<>(10.5): " + btDouble.getId());
-
-        btInt.printValues("A",10,new ArrayList(){{
-            this.add(10);
-            this.add(20);
-            this.add(30);
-        }});
         /*Blow code will give compiler error as BoundTypeExample class is initialized with
         value "Sahil" which does not extend Number datatype*/
 //        System.out.println("Value of BoundTypeExample<>(10.5): " + new BoundTypeExample<>("sahil").getId());
 
+        /*Example 3: Calling a simple method which is generic*/
+        ArrayList alist = new ArrayList(){{
+            this.add(10);
+            this.add(20);
+            this.add(30);
+        }};
+        btInt.printValues("A",10,alist);
+
+        /*Example 4: Wild cards<?> in Generics to allow multiple objects of the same type*/
         EmpUtility<CompanyA> empA = new EmpUtility<>(new CompanyA(100,"A"));
         EmpUtility<CompanyB> empB = new EmpUtility<>(new CompanyB(100,"B" ));
         EmpUtility<CompanyB> empC = new EmpUtility<>(new CompanyB(200,"B" ));
@@ -33,9 +39,6 @@ public class SimpleGenericClass{
         empC.printEmployee();
         System.out.println("Is salary same A & B? "+empA.isSalaryEqual(empB));
         System.out.println("Is salary same A & C? "+empA.isSalaryEqual(empC));
-
-
-
     }
 
 }
