@@ -1,5 +1,7 @@
 package algorithms;
 
+import java.util.Arrays;
+
 /**
  * Author: Sahil Mutreja
  * Date: April 21, 2018
@@ -24,6 +26,49 @@ public class SortingAlgo {
         insertionSort(values);
         printArray(values);
 
+        System.out.println("Sorting via Quick Sort:");
+        values = new int[]{20, 1, 10, 4, 5};
+        quickSort(values,0,values.length-1);
+        printArray(values);
+
+    }
+
+    static int partition(int arr[], int left, int right, int pivot)
+    {
+        int leftPointer = left -1;
+        int rightPointer = right;
+
+        while(true){
+            while(arr[++leftPointer]<pivot && leftPointer<arr.length-1);
+            while(arr[--rightPointer]>pivot && rightPointer>0);
+            if(leftPointer>=rightPointer) break;
+            else{
+                swapValues(arr,leftPointer,rightPointer);
+            }
+        }
+        swapValues(arr,leftPointer,right);
+        return leftPointer;
+    }
+
+    private static void swapValues(int[] arr, int left, int right) {
+        int temp  = arr[left];
+        arr[left] = arr[right];
+        arr[right] = temp;
+    }
+
+
+    private static void quickSort(int arr[], int left, int right)
+    {
+        if(right <= left) return;
+        else
+        {
+            int pivot = arr[right];
+            int pivotLocation = partition(arr, left, right, pivot);
+            // Recursively sort elements before
+            // partition and after partition
+            quickSort(arr, left, pivotLocation-1); // left side of pivot
+            quickSort(arr, pivotLocation+1, right); // riht side of pivot
+        }
     }
 
     private static void insertionSort(int[] values) {
@@ -53,10 +98,6 @@ public class SortingAlgo {
         }
     }
 
-    /**
-     * @param values is the array to be sorted
-     * @return sorted array
-     */
     private static void bubbleSort(int[] values) {
         for (int count = 0; count < values.length; count++) {
             for (int j = 0; j < values.length-1; j++) {
