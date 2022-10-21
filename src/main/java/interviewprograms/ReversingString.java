@@ -10,9 +10,9 @@ public class ReversingString {
             return s;
         }
         else{
-            char[] sArr = s.toCharArray();
-            for (int i = sArr.length-1; i >= 0; i--)
-                rev+=sArr[i];
+            char[] charArray = s.toCharArray();
+            for (int i = charArray.length-1; i >= 0; i--)
+                rev+=charArray[i];
             return rev;
         }
      }
