@@ -1,4 +1,4 @@
-package interviewprograms;
+package interviewprograms.basic;
 
 /***
  * Date: May 14, 2018

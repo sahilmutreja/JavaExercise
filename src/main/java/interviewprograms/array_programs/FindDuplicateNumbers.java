@@ -1,4 +1,4 @@
-package interviewprograms;
+package interviewprograms.array_programs;
 
 import java.util.ArrayList;
 

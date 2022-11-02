@@ -1,4 +1,4 @@
-package interviewprograms;
+package interviewprograms.basic;
 
 public class ReverseNumber {
     public static void main(String[] args) {

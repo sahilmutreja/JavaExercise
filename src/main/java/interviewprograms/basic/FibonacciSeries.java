@@ -1,4 +1,4 @@
-package interviewprograms;
+package interviewprograms.basic;
 
 public class FibonacciSeries {
     public static void main(String[] args) {

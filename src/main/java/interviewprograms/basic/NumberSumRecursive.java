@@ -1,4 +1,4 @@
-package interviewprograms;
+package interviewprograms.basic;
 
 public class NumberSumRecursive {
     static int sum = 0;

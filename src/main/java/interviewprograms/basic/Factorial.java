@@ -1,4 +1,4 @@
-package interviewprograms;
+package interviewprograms.basic;
 
 import java.util.Scanner;
 

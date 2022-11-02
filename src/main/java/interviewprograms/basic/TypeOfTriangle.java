@@ -1,4 +1,4 @@
-package interviewprograms;
+package interviewprograms.basic;
 
 class TypeOfTriangle {
     public static void main(String[] args) {
