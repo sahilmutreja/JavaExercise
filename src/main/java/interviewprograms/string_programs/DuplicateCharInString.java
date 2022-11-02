@@ -1,4 +1,4 @@
-package interviewprograms;
+package interviewprograms.string_programs;
 
 import java.util.*;
 

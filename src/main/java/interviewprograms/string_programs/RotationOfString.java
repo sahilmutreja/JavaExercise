@@ -1,4 +1,4 @@
-package interviewprograms;
+package interviewprograms.string_programs;
 
 /**
  * Checking if two strings are rotations of each other

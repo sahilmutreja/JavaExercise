@@ -1,13 +1,26 @@
-package interviewprograms;
+package interviewprograms.array_programs;
 
 import java.io.*;
 import java.util.*;
 
 public class ReversingArray {
 
+    /* Reversing in the same array
+
+        for (int i = 0; i < a.length / 2; i++) {
+                int temp = a[i];
+                a[i] = a[a.length - i - 1];
+                a[a.length - i - 1] = temp;
+            }
+        System.out.println();
+            for (int i : a) {
+                System.out.print(i+" ");
+            }
+    */
+
     public static void main(String[] args) {
         int[] a = {1, 2, 3, 2, 1};
-        int b[] = new int[a.length];
+        int[] b = new int[a.length];
         int k = 0;
 
         for (int i : a) {
@@ -29,18 +42,6 @@ public class ReversingArray {
             System.out.println("Palindrome");
         } else
             System.out.println("Not a Palindrome");
-
-        /*for (int i : a) {
-            System.out.print(i+" ");}
-            for (int i = 0; i < a.length / 2; i++) {
-                int temp = a[i];
-                a[i] = a[a.length - i - 1];
-                a[a.length - i - 1] = temp;
-            }
-        System.out.println();
-            for (int i : a) {
-                System.out.print(i+" ");
-            }*/
     }
 
     private static boolean eq(int a[], int b[]) {

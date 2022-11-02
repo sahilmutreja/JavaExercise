@@ -1,4 +1,4 @@
-package interviewprograms;
+package interviewprograms.array_programs;
 
 public class AdditionOf2ArrayIn3rdArray {
     public static void main(String[] args) {

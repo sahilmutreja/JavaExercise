@@ -1,4 +1,4 @@
-package interviewprograms;
+package interviewprograms.array_programs;
 
 class FindElementInArray {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package interviewprograms;
+package interviewprograms.string_programs;
 
 public class Rough2 {
     public static void main(String[] args) {

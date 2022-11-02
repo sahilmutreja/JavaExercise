@@ -1,6 +1,6 @@
-package interviewprograms;
+package interviewprograms.string_programs;
 
-public class ReversingString {
+public class ReversingStringRecursive {
 
     static String rev = "";
     static String reverse(String s){
@@ -10,15 +10,16 @@ public class ReversingString {
             return s;
         }
         else{
-            char[] charArray = s.toCharArray();
-            for (int i = charArray.length-1; i >= 0; i--)
-                rev+=charArray[i];
+            System.out.println("returning s:" + s + " and rev: " + rev);
+            rev += s.charAt(s.length()-1) + reverse(s.substring(0,s.length()-1));
+            System.out.println("returning s:" + s + " and rev: " + rev);
+
             return rev;
         }
      }
 
     public static void main(String[] args) {
-        String s1 = "sahil";
+        String s1 = "gaurav";
         System.out.println("Reverse String = " + reverse(s1));
     }
 }

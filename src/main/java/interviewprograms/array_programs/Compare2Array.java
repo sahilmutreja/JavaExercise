@@ -1,4 +1,4 @@
-package interviewprograms;
+package interviewprograms.array_programs;
 
 public class Compare2Array {
 

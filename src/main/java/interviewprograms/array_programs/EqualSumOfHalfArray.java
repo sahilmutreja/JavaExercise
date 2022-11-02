@@ -1,4 +1,4 @@
-package interviewprograms;
+package interviewprograms.array_programs;
 
 public class EqualSumOfHalfArray {
     public static void main(String[] args) {

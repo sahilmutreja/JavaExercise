@@ -1,4 +1,4 @@
-package interviewprograms;
+package interviewprograms.array_programs;
 
 public class MaxDiffBetwn2AdjcntNumInAnArray {
     static int a[] = {1,5,6,9,15,3};
