@@ -37,9 +37,46 @@
     <distributionManagement>
         <repository>
             <id>github</id>
-            <name>JAVA EXERCISE</name>
-            <url>https://maven.pkg.github.com/sahilmutreja/JavaExercise.git</url>
+            <name>GitHub sahilmutreja Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/sahilmutreja/JavaExercise</url>
         </repository>
     </distributionManagement>
 
 </project>
+
+
+<!--
+ADDED PACKAGE TO GITHUB
+NEED TO ADD FOLLOWING TO THE SETTINGS.XML FILE
+
+ <activeProfiles>
+        <activeProfile>github</activeProfile>
+    </activeProfiles>
+
+    <profiles>
+        <profile>
+            <id>github</id>
+            <repositories>
+                <repository>
+                    <id>central</id>
+                    <url>https://repo1.maven.org/maven2</url>
+                </repository>
+                <repository>
+                    <id>github</id>
+                    <url>https://maven.pkg.github.com/sahilmutreja/JavaExercise</url>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+            </repositories>
+        </profile>
+    </profiles>
+
+    <servers>
+        <server>
+            <id>github</id>
+            <username>sahilmutreja</username>
+            <password>GITHUB_PERSONAL_ACCESS_TOKEN<password>
+        </server>
+    </servers>
+-->
